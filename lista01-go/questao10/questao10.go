@@ -10,5 +10,5 @@ func main() {
 	fmt.Scan(&a, &b, &c, &d)
 
 	detMatriz = a*d - b*c
-	fmt.Printf("O VALOR DO DETERMINANTE E = %.2f\n", detMatriz)
+	fmt.Printf("O VALOR DO DETERMINANTE É = %.2f\n", detMatriz)
 }

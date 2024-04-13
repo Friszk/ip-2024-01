@@ -15,5 +15,5 @@ func main() {
 	areaB = (3 * aresta * aresta * math.Sqrt(3)) / 2
 	areaTotal = (areaB * altura) / 3
 
-	fmt.Printf("O VOLUME DA PIRAMIDE É %.2f METROS CÚBICOS\n", areaTotal)
+	fmt.Printf("O VOLUME DA PIRÂMIDE É %.2f METROS CÚBICOS\n", areaTotal)
 }

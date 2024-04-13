@@ -10,5 +10,5 @@ func main() {
 	fmt.Scan(&a, &b, &c)
 
 	resultado = (b * b) - (4 * a * c)
-	fmt.Printf("O VALOR DE DELTA E = %.2f\n", resultado)
+	fmt.Printf("O VALOR DE DELTA É = %.2f\n", resultado)
 }
