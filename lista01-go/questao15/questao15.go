@@ -17,7 +17,7 @@ func main() {
 		fmt.Println("Número fora do campo limite")
 		return
 	} else {
-		for i := 2.0; i <= numero; i = i + 2 {
+		for i := 2.0; i <= numero; i += 2 {
 			resultado = math.Pow(i, numQ)
 			fmt.Printf("%v ^ %v = %v\n", i, numQ, resultado)
 		}
