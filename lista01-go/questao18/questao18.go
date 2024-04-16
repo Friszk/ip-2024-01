@@ -12,7 +12,6 @@ func main() {
 	fmt.Scan(&a, &r, &n)
 
 	termoPA = a
-	soma = 0
 
 	for i := 0; i < n; i++ {
 		termoPA = a + r*i
