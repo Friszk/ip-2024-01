@@ -35,7 +35,7 @@ func main() {
 
 	}
 
-	if maiorCompEncontrado[0] == 0 {
+	if maiorCompEncontrado[0] == 0 && len(maiorCompEncontrado) == 1 {
 		fmt.Println("O comprimento do segmento crescente máximo é: 0")
 	} else {
 		fmt.Printf("O comprimento do segmento crescente máximo é: %v\n", len(maiorCompEncontrado)-1)
