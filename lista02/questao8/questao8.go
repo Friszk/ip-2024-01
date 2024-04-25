@@ -4,35 +4,31 @@ import (
 	"fmt"
 )
 
-var n, f int
-var sequencia []int
+var n, cont int
+var times []int
 
 func main() {
+	fmt.Println("Digite a quantidade de times para descobrir as possíveis finais do campeonato.")
 	fmt.Scan(&n)
-
 	for i := 1; i <= n; i++ {
-		sequencia = append(sequencia, i)
+		times = append(times, i)
 	}
-	permutar(sequencia, 0)
-
+	if n <= 1 {
+		fmt.Println("Campeonato inválido!")
+	}
+	permutarJogos(1, 1)
 }
 
-func trocar(x, y int) {
-	var temp int
+func permutarJogos(i int, anterior int) {
+	for ; i <= len(times)-anterior; i++ {
+		cont++
+		fmt.Printf("Final %v: Time%v X Time%v\n", cont, times[anterior-1], times[len(times)-i])
+		if len(times)-i == anterior {
 
-	temp = sequencia[x]
-	sequencia[x] = sequencia[y]
-	sequencia[y] = temp
-}
-
-func permutar(s []int, inicio int) {
-	if inicio == len(s)-1 {
-		fmt.Println(s)
-		return
-	}
-	for i := inicio; i < len(s); i++ {
-		trocar(inicio, i)
-		permutar(s, inicio+1)
-		trocar(inicio, i)
+			if anterior-1 == (len(times) - 1/2) {
+				return
+			}
+			permutarJogos(1, anterior+1)
+		}
 	}
 }

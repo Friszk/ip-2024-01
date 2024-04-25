@@ -16,7 +16,7 @@ var (
 )
 
 func main() {
-	fmt.Println("Digiteo valor do ingresso, o valor inicial e o valor final")
+	fmt.Println("Digite o valor do ingresso, o valor inicial e o valor final")
 	fmt.Scan(&ValorIngresso, &ValorInicial, &ValorFinal)
 
 	for ValorAtual := ValorInicial; ValorAtual <= ValorFinal; ValorAtual++ {
