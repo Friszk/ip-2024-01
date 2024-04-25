@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-var n, f int
+var n, f float64
 
 func main() {
 
@@ -22,5 +22,5 @@ func main() {
 		f = f * n
 	}
 
-	fmt.Printf("%v! = %v\n", n, f)
+	fmt.Printf("%v! = %.f\n", n, f)
 }
