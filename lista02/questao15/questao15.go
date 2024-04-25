@@ -6,16 +6,14 @@ import (
 
 func main() {
 
-	var T int
+	var T, n int
 
 	fmt.Scan(&T)
 	numeros := []int{}
-	for i := 0; i < T; i++ {
-		fmt.Scan(&)
-		numeros = append(numeros, T)
+	for i := 0; i < T*2; i++ {
+		fmt.Scan(&n)
+		numeros = append(numeros, n)
 	}
-
-
 
 	fmt.Println(numeros)
 }
