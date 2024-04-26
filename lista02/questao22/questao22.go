@@ -8,7 +8,7 @@ func main() {
     
     for i:= 1.0; i > 0; i++ {
         if n*i == float64(int(n*i)) {
-            fmt.Printf("%v/%v", n*i, i)
+            fmt.Printf("%.f/%.f", n*i, i)
             break
         }
     }
