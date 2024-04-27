@@ -2,8 +2,8 @@ package main
 import "fmt"
 
 func main() {
-    var x, y, z, maior int
-    var mudou bool
+    var x, y, z, maior, MMC int
+    var mudoux, mudouy, mudouz bool
     fmt.Scan(&x, &y, &z)
     
     if x > y && x > z {
@@ -12,24 +12,35 @@ func main() {
         maior = y
     } else {maior = z}
     
+    MMC = 1
+    
     for i:= 2; i < maior; {
-        mudou = false
+        mudoux = false
+        mudouy = false
+        mudouz = false
         
         if x%i == 0 {
-            x /= i
-            mudou = true
+            mudoux = true
         }
         if y%i == 0 {
-            y /= i
-            mudou = true
+            mudouy = true
         }
         if z%i == 0 {
-            z /= i
-            mudou = true
+            mudouz = true
         }
-        
-        if mudou {
-            fmt.Println(i)
+        if mudoux || mudouy || mudouz{
+            fmt.Printf("%v %v %v : %v\n", x, y, z, i)
+            MMC *= i
         } else {i++}
+        if mudoux {
+            x /= i
+        }
+        if mudouy {
+            y /= i
+        }
+        if mudouz {
+            z /= i
+        }
     }
+    fmt.Println("MMC:", MMC)
 }
