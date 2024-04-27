@@ -23,7 +23,7 @@ func main() {
 	}
 
 	nI := n
-	for nAtual := 3; nAtual <= n; nAtual++ {
+	for nAtual := 3; nAtual <= n/2; nAtual++ {
 		for i = 2; i < nAtual; i++ {
 			if nAtual%i == 0 {
 				eprimo = false

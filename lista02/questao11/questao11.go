@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	fmt.Println("Digite um número e precisão da raiz quadrada a ser calculada utilizando o método\nBabilônico ")
+	fmt.Println("Digite um número e a precisão da raiz quadrada a ser calculada utilizando o método Babilônico ")
 	var n, e, r float64
 	fmt.Scan(&n, &e)
 
