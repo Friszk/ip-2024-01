@@ -14,7 +14,7 @@ func main() {
     
     MMC = 1
     
-    for i:= 2; i < maior; {
+    for i:= 2; i <= maior; {
         mudoux = false
         mudouy = false
         mudouz = false

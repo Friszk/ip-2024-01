@@ -19,7 +19,7 @@ func main() {
   }
   
   fmt.Printf("%v = ", n)
-  for i, num := range divisores {=
+  for i, num := range divisores {
     fmt.Print(num)
     if i < len(divisores)-1 {
       fmt.Print(" + ")
