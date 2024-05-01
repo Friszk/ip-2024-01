@@ -5,14 +5,28 @@ import "fmt"
 func main() {
 	var n, M, num int
 
-	fmt.Scan(&n)
+	for {
+		fmt.Scan(&n)
+		if n > 1 && n < 10000 {
+			break
+		} else {
+			fmt.Println("O número precisa ser > 1 e < 10000")
+		}
+	}
 	numeros := make([]int, n)
 	resultados := []string{}
 	for i := 0; i < n; i++ {
 		fmt.Scan(&numeros[i])
 	}
 
-	fmt.Scan(&M)
+	for {
+		fmt.Scan(&M)
+		if M > 1 && M < 1000 {
+			break
+		} else {
+			fmt.Println("O número precisa ser > 1 e < 1000")
+		}
+	}
 	for i := 0; i < M; i++ {
 		fmt.Scan(&num)
 		achou := encontrar(num, n, numeros)
@@ -33,8 +47,6 @@ func encontrar(n int, t int, s []int) bool {
 		if n == s[i] {
 			achou = true
 			break
-		} else {
-			achou = false
 		}
 	}
 	return achou
