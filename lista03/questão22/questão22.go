@@ -6,8 +6,36 @@ import (
 )
 
 func main() {
-  var num int
-  fmt.Scan(&num)
+  var num, IndiceMenor, d int
+  resultados := []string{}
+  menor := 9
+  
+  
+  for {
+  fmt.Scan(&d, &num)
+  if d < 1 || n < d || n > 100000 {
+    fmt.Println("Fora dos limites")
+    return
+  }
+  
+  if d == 0 {
+    break
+  }
   numString := strconv.Itoa(num)
-  fmt.Println(string(numString[0]))
+  for i := 0; i < d; i++ {
+    for i := range numString {
+      x, _ := strconv.Atoi(string(numString[i]))
+      if x < menor {
+        menor, _ = strconv.Atoi(string(numString[i]))
+        IndiceMenor = i
+      }
+    }
+    numString = numString[:IndiceMenor] + numString[IndiceMenor+1:]
+    menor = 9
+  }
+  resultados = append(resultados, numString)
+  }
+  for i := range resultados {
+    fmt.Println(resultados[i])
+  }
 }

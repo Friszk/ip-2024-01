@@ -5,6 +5,12 @@ import "fmt"
 func main() {
   var n, unicos int
   fmt.Scan(&n)
+  
+  if n > 5000 {
+    fmt.Println("O número deve ser menor que 5000")
+    return
+  }
+  
   lista := make([]int, n)
   
   for i := range lista {

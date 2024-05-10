@@ -8,6 +8,11 @@ import (
 func main() {
   var N, c int
   fmt.Scan(&N)
+  if N < 2 || N > 1000 {
+    fmt.Println("O número de pontos deve estar no intervalo de 2 a 1000")
+    return
+  }
+  
   pontos := make([]float64, N*3)
   vetoresMaior := make([]float64, N-1)
   

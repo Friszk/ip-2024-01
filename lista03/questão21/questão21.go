@@ -6,6 +6,11 @@ func main() {
   var N int
   
   fmt.Scan(&N)
+  if N < 1 || N > 100000 {
+    fmt.Println("O número deve estar entre 1 e 100000")
+    return
+  }
+  
   listaP := []int{}
   listaI := []int{}
   lista := make([]int, N)
