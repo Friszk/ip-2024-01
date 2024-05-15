@@ -13,6 +13,10 @@ func main() {
 
   n := 0
   fmt.Scan(&n)
+  if n < 1 || n > 50000 {
+    fmt.Println("Quantidade de apostas deve estar no intervalo de 1 a 50000")
+    return
+  }
   for i := 0; i < n; i++ {
     aposta := make([]int, 6)
     for i := range aposta {

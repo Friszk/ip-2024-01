@@ -18,6 +18,10 @@ func main() {
     fmt.Println("FORMATO INVÁLIDO")
     return
   }
+  if len(frase[0]) > 1000 || len(frase[1]) > 1000{
+    fmt.Println("A frase deve conter no máximo 1000 caracteres")
+    return
+  }
   for _, char := range strings.ToLower(strings.TrimSpace(frase[0])) {
     if _, ok := vogais1[char]; ok {
       vogais1[char]++

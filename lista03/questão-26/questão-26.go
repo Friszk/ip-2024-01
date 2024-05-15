@@ -13,6 +13,10 @@ func main() {
   for i := 0; i < T; i++ {
     for i := range anoes {
       fmt.Scan(&anoes[i])
+      if anoes[i] > 99 || anoes[i] < 1 {
+        fmt.Println("Número da touca do anão inválido")
+        return
+      }
       somatotal += anoes[i]
     }
     BubbleSort(anoes)
